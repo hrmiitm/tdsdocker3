@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Podman Image
-        run: podman build -t docker.io/hrmhrmhrm/tdsdemo:latest .
+        run: pwd && ls -la && podman build -t docker.io/hrmhrmhrm/tdsdemo:latest .
 
       - name: Push To Cloud
         run: podman push docker.io/hrmhrmhrm/tdsdemo:latest
